@@ -23,6 +23,6 @@ public:
 	Napis polaczNapisy(const Napis& n);
 	Napis polaczNapisTablica(const char* napis);
 	Napis polaczNapisZnak(const char znak);
-	Napis zmienZnak(const char znak, const int miejsce);
+	void zmienZnak(const char znak, const int miejsce);
 };
 #endif

@@ -90,7 +90,7 @@ Napis Napis::polaczNapisZnak(const char znak)
 	return nowyNapis;
 }
 
-Napis Napis::zmienZnak(const char znak, const int miejsce)
+void Napis::zmienZnak(const char znak, const int miejsce)
 {
 	char cToStr[2];
 	cToStr[1] = '\0';
@@ -107,5 +107,4 @@ Napis Napis::zmienZnak(const char znak, const int miejsce)
 		this->tablicaZnakow[miejsce - 1] = znak;
 		this->wypisz();
 	}
-	return tablicaZnakow;
 }
