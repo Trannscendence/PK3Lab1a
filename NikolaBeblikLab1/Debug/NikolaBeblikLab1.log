@@ -1,0 +1,25 @@
+﻿  Napis.cpp
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(24,10): error C2535: „Napis::~Napis(void)”: Funkcja składowa już zdefiniowana lub zadeklarowana
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(8): message : zobacz deklarację „Napis::~Napis”
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(39,6): error C2365: "Napis::dlugosc": zmiana definicji; definicja poprzednia była "funkcja składowa"
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(26): message : zobacz deklarację „Napis::dlugosc”
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(12,1): error C2440: "=": nie można konwertować z "const char *" na "char *"
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(12,19): message : Konwersja traci kwalifikatory
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(16,1): error C2440: "=": nie można konwertować z "const char" na "char *"
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(16,19): message : Konwersja z typu całkowitego na typ wskaźnika wymaga operatora reinterpret_cast, rzutowania w stylu języka C lub rzutowania w stylu funkcji
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(28,10): error C2064: funkcja przyjmująca 0 argumentów nie jest wynikiem przetworzenia termu
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(44,35): error C2511: „Napis &Napis::operator =(Napis &)”: Przeciążona funkcja składowa nie została znaleziona w „Napis”
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(4): message : zobacz deklarację „Napis”
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(45,2): error C2671: „Napis::=”: Statyczne funkcje składowe nie mają wskaźników „this”
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(46,27): error C2597: niedozwolone odwołanie do niestatycznej składowej „Napis::tablicaZnakow”
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(46,27): error C3867: „Napis::tablicaZnakow”: niestandardowa składnia; użyj znaku „&”, aby utworzyć wskaźnik do składowej
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(47,25): error C2541: "delete": nie można usunąć obiektów, które nie są wskaźnikami
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(48,2): error C2671: „Napis::=”: Statyczne funkcje składowe nie mają wskaźników „this”
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(48,44): error C3867: „Napis::dlugosc”: niestandardowa składnia; użyj znaku „&”, aby utworzyć wskaźnik do składowej
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(48,44): error C2296: "+": niedozwolone, lewy operand jest typu "int (__thiscall Napis::* )(void)"
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(48,45): error C3078: należy określić rozmiar tablicy w nowych wyrażeniach bez inicjatora
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(49,9): error C2597: niedozwolone odwołanie do niestatycznej składowej „Napis::tablicaZnakow”
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(38): message : zobacz deklarację „Napis::tablicaZnakow”
+C:\Users\nbebl\source\repos\s3pk\NikolaBeblikLab1\NikolaBeblikLab1\Napis.h(50,10): error C2671: „Napis::=”: Statyczne funkcje składowe nie mają wskaźników „this”
+  NikolaBeblikLab1.cpp
+  Generowanie kodu...
