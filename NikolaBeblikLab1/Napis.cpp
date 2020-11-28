@@ -16,6 +16,7 @@ Napis::Napis(const char znak)
 		delete[] tablicaZnakow;
 	this->tablicaZnakow = new char[dlugosc + 1];
 	tablicaZnakow[0] = znak;
+	tablicaZnakow[1] = '\0';
 }
 Napis::Napis(const Napis& napis)
 {
