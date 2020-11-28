@@ -76,10 +76,13 @@ public:
 	}
 	Napis polaczNapisZnak(const char znak)
 	{
+		char cToStr[2];
+		cToStr[1] = '\0';
+		cToStr[0] = znak;
 		int tempDlugosc = this->dlugosc + 1;
 		char* tempTablica = new char[tempDlugosc + 1];
 		strcpy(tempTablica, this->tablicaZnakow);
-		strcat(tempTablica, znak);
+		strcat(tempTablica, cToStr);
 	}
 };
 
