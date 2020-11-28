@@ -1,4 +1,6 @@
 #pragma once
+#ifndef NAPIS_H
+#define NAPIS_H
 #include <iostream>
 #pragma warning(disable:4996)
 class Napis
@@ -9,107 +11,19 @@ private:
 
 public:
 	Napis();
+	Napis(const char* napis);
+	Napis(const char znak);
+	Napis(const Napis& napis);
+	~Napis();
 
-	Napis(const char * napis)
-	{
-		this->dlugosc = strlen(napis);
-		if (tablicaZnakow != NULL)
-			delete[] tablicaZnakow;
-		this->tablicaZnakow = new char[dlugosc + 1];
-		strcpy(tablicaZnakow, napis);
-	}
-	Napis(const char znak)
-	{
-		this->dlugosc = 1;
-		if (tablicaZnakow != NULL)
-			delete[] tablicaZnakow;
-		this->tablicaZnakow = new char[dlugosc + 1];
-		tablicaZnakow[0] = znak;
-	}
-	Napis(const Napis& napis)
-	{
-		this->dlugosc = napis.dlugosc;
-		if (tablicaZnakow != NULL)
-			delete[] tablicaZnakow;
-		this->tablicaZnakow = new char[dlugosc + 1];
-		strcpy(tablicaZnakow, napis.tablicaZnakow);
-	}
+	int zwrocDlugosc();
 
-
-	~Napis()
-	{
-		if (tablicaZnakow != NULL)
-			delete[] tablicaZnakow;
-	}
-
-	int zwrocDlugosc()
-	{
-		return dlugosc;
-	};
-	void wypisz()
-	{
-		for (int i=0; i<dlugosc;i++)
-			std::cout << tablicaZnakow[i];
-
-		std::cout << std::endl;
-	};
-
-	Napis operator=(const Napis& n) {
-		this->dlugosc = n.dlugosc;
-		if (tablicaZnakow != NULL)
-			delete[] tablicaZnakow;
-		this->tablicaZnakow = new char[dlugosc + 1];
-		strcpy(tablicaZnakow, n.tablicaZnakow);
-		return *this;
-	}
-
-	Napis polaczNapisy(const Napis& n)
-	{
-		int tempDlugosc = this->dlugosc + n.dlugosc;
-		char * tempTablica = new char [tempDlugosc + 1];
-		strcpy(tempTablica, this->tablicaZnakow);
-		strcat(tempTablica, n.tablicaZnakow);
-		return tempTablica;
-	}
-
-	Napis polaczNapisTablica(const char * napis)
-	{
-		int tempDlugosc = this->dlugosc + strlen(napis);
-		char* tempTablica = new char[tempDlugosc + 1];
-		strcpy(tempTablica, this->tablicaZnakow);
-		strcat(tempTablica, napis);
-		return tempTablica;
-	}
-	Napis polaczNapisZnak(const char znak)
-	{
-		char cToStr[2];
-		cToStr[1] = '\0';
-		cToStr[0] = znak;
-		int tempDlugosc = this->dlugosc + 1;
-		char* tempTablica = new char[tempDlugosc + 1];
-		strcpy(tempTablica, this->tablicaZnakow);
-		strcat(tempTablica, cToStr);
-		return tempTablica;
-	}
-
-	Napis zmienZnak(const char znak, const int miejsce)
-	{
-		char cToStr[2];
-		cToStr[1] = '\0';
-		cToStr[0] = znak;
-		if (miejsce>dlugosc+1)
-		{
-			std::cout << "Nie ma takiego miejsca w Napisie!";
-		}
-		else
-		{
-			std::cout << "Litera podana na " << miejsce << " miejscu: ";
-			std::cout << this->tablicaZnakow[miejsce] << std::endl;
-			std::cout << "Nowy napis: ";
-			this->tablicaZnakow[miejsce-1] = znak;
-		}
-		return tablicaZnakow;
-	}
+	Napis operator=(const Napis& n);
+	void wypisz();
+	Napis polaczNapisy(const Napis& n);
+	Napis polaczNapisTablica(const char* napis);
+	Napis polaczNapisZnak(const char znak);
+	Napis zmienZnak(const char znak, const int miejsce);
 };
-
+#endif
 
