@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-
+#pragma warning(disable:4996)
 class Napis
 {
 private:
@@ -48,8 +48,10 @@ public:
 	};
 	void wypisz()
 	{
-		for (int i=0; i<dlugosc-1;i++)
+		for (int i=0; i<dlugosc;i++)
 			std::cout << tablicaZnakow[i];
+
+		std::cout << std::endl;
 	};
 
 	Napis operator=(const Napis& n) {
@@ -67,7 +69,7 @@ public:
 		char * tempTablica = new char [tempDlugosc + 1];
 		strcpy(tempTablica, this->tablicaZnakow);
 		strcat(tempTablica, n.tablicaZnakow);
-
+		return tempTablica;
 	}
 
 	Napis polaczNapisTablica(const char * napis)
@@ -76,6 +78,7 @@ public:
 		char* tempTablica = new char[tempDlugosc + 1];
 		strcpy(tempTablica, this->tablicaZnakow);
 		strcat(tempTablica, napis);
+		return tempTablica;
 	}
 	Napis polaczNapisZnak(const char znak)
 	{
@@ -86,6 +89,7 @@ public:
 		char* tempTablica = new char[tempDlugosc + 1];
 		strcpy(tempTablica, this->tablicaZnakow);
 		strcat(tempTablica, cToStr);
+		return tempTablica;
 	}
 };
 

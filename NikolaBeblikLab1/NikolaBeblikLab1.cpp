@@ -1,14 +1,42 @@
 ﻿#include <iostream>
 #include <string>
 #include "Napis.h"
+#pragma warning(disable:4996)
 
 int main()
 {
-    Napis litera = Napis("a");
-    litera.wypisz();
-    std::cout << litera.zwrocDlugosc() << std::endl;
+    Napis napis = Napis("napis");
     char str[] = "hello";
     Napis hello = Napis(str);
+    char znak = '!';
+    Napis znakNapis = Napis(znak);
+    Napis kopiaHello = Napis(hello);
+    Napis przypisanyNapis = napis;
+
+    std::cout << "Wypisz napis: ";
+    napis.wypisz();
+
+    std::cout << "Dlugosc napisu: ";
+    std::cout << napis.zwrocDlugosc() << std::endl;
+
+    std::cout << "Wypisz hello: ";
     hello.wypisz();
+
+    std::cout << "Polacz Napisy napis i hello: ";
+    Napis polaczoneNapisy = napis.polaczNapisy(hello);
+    polaczoneNapisy.wypisz();
+
+    std::cout << "Polacz Napis hello i znak '!': ";
+    Napis NapisOrazZnak = hello.polaczNapisZnak(znak);
+    NapisOrazZnak.wypisz();
+
+    std::cout << "Polacz Napis napis i ciag znakow 'hello': ";
+    Napis NapisOrazCiag = napis.polaczNapisTablica(str);
+    NapisOrazCiag.wypisz();
+    std::cout << "Dlugosc Napisu powyzej: ";
+    std::cout << NapisOrazCiag.zwrocDlugosc() << std::endl;
+
+    std::cout << "Wypisz przypisany napis: ";
+    przypisanyNapis.wypisz();
     return 0;
 }
