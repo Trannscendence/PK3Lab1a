@@ -62,7 +62,7 @@ Napis Napis::polaczNapisy(const Napis& n)
 	strcpy(tempTablica, this->tablicaZnakow);
 	strcat(tempTablica, n.tablicaZnakow);
 	Napis nowyNapis = Napis(tempTablica);
-	delete tempTablica;
+	delete [] tempTablica;
 	return nowyNapis;
 }
 
@@ -73,7 +73,7 @@ Napis Napis::polaczNapisTablica(const char* napis)
 	strcpy(tempTablica, this->tablicaZnakow);
 	strcat(tempTablica, napis);
 	Napis nowyNapis = Napis(tempTablica);
-	delete tempTablica;
+	delete [] tempTablica;
 	return nowyNapis;
 }
 Napis Napis::polaczNapisZnak(const char znak)
@@ -86,7 +86,7 @@ Napis Napis::polaczNapisZnak(const char znak)
 	strcpy(tempTablica, this->tablicaZnakow);
 	strcat(tempTablica, cToStr);
 	Napis nowyNapis = Napis(tempTablica);
-	delete tempTablica;
+	delete [] tempTablica;
 	return nowyNapis;
 }
 
@@ -105,6 +105,7 @@ Napis Napis::zmienZnak(const char znak, const int miejsce)
 		std::cout << this->tablicaZnakow[miejsce-1] << std::endl;
 		std::cout << "Nowy napis: ";
 		this->tablicaZnakow[miejsce - 1] = znak;
+		this->wypisz();
 	}
 	return tablicaZnakow;
 }
