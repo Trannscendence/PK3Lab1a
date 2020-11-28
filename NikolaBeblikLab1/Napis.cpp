@@ -4,16 +4,12 @@
 Napis::Napis(const char* napis)
 {
 	this->dlugosc = strlen(napis);
-	if (tablicaZnakow != NULL)
-		delete[] tablicaZnakow;
 	this->tablicaZnakow = new char[dlugosc + 1];
 	strcpy(tablicaZnakow, napis);
 }
 Napis::Napis(const char znak)
 {
 	this->dlugosc = 1;
-	if (tablicaZnakow != NULL)
-		delete[] tablicaZnakow;
 	this->tablicaZnakow = new char[dlugosc + 1];
 	tablicaZnakow[0] = znak;
 	tablicaZnakow[1] = '\0';
@@ -21,8 +17,6 @@ Napis::Napis(const char znak)
 Napis::Napis(const Napis& napis)
 {
 	this->dlugosc = napis.dlugosc;
-	if (tablicaZnakow != NULL)
-		delete[] tablicaZnakow;
 	this->tablicaZnakow = new char[dlugosc + 1];
 	strcpy(tablicaZnakow, napis.tablicaZnakow);
 }
