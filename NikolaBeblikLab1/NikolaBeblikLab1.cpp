@@ -42,9 +42,9 @@ int main()
     przypisanyNapis.wypisz();
     std::cout << "Zmien znak w napisie hello na heblo: " << std::endl;
     hello.zmienZnak('b', 3);
-    std::cout << "Zmien znak ktory nie istnieje (33): " << std::endl;
-    hello.zmienZnak('b', 33);
-    std::cout << "Zmien znak ktory nie istnieje (-10): " << std::endl;
-    hello.zmienZnak('b', -10);
+    std::cout << "Zmien znak ktory nie istnieje (6): " << std::endl;
+    hello.zmienZnak('b', 6);
+    std::cout << "Zmien znak ktory nie istnieje (0): " << std::endl;
+    hello.zmienZnak('b', 0);
     return 0;
 }
