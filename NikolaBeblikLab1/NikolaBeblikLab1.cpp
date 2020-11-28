@@ -41,5 +41,6 @@ int main()
     std::cout << "Zmien znak w napisie hello na heblo: " << std::endl;
     hello.zmienZnak('b', 3);
     hello.wypisz();
+
     return 0;
 }
