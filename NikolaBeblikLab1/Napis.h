@@ -91,6 +91,25 @@ public:
 		strcat(tempTablica, cToStr);
 		return tempTablica;
 	}
+
+	Napis zmienZnak(const char znak, const int miejsce)
+	{
+		char cToStr[2];
+		cToStr[1] = '\0';
+		cToStr[0] = znak;
+		if (miejsce>dlugosc+1)
+		{
+			std::cout << "Nie ma takiego miejsca w Napisie!";
+		}
+		else
+		{
+			std::cout << "Litera podana na " << miejsce << " miejscu: ";
+			std::cout << this->tablicaZnakow[miejsce] << std::endl;
+			std::cout << "Nowy napis: ";
+			this->tablicaZnakow[miejsce-1] = znak;
+		}
+		return tablicaZnakow;
+	}
 };
 
 
