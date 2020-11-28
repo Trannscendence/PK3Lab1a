@@ -12,7 +12,6 @@ int main()
     Napis znakNapis = Napis(znak);
     Napis kopiaHello = Napis(hello);
     Napis przypisanyNapis = napis;
-
     std::cout << "Wypisz napis: ";
     napis.wypisz();
 
@@ -41,6 +40,9 @@ int main()
     std::cout << "Zmien znak w napisie hello na heblo: " << std::endl;
     hello.zmienZnak('b', 2);
     hello.wypisz();
-
+    std::cout << "Zmien znak ktory nie istnieje (33): " << std::endl;
+    hello.zmienZnak('b', 33);
+    std::cout << "Zmien znak ktory nie istnieje (-10): " << std::endl;
+    hello.zmienZnak('b', -10);
     return 0;
 }

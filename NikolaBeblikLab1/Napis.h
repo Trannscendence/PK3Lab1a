@@ -26,4 +26,3 @@ public:
 	Napis zmienZnak(const char znak, const int miejsce);
 };
 #endif
-

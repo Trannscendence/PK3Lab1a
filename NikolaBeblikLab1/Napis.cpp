@@ -90,16 +90,14 @@ Napis Napis::zmienZnak(const char znak, const int miejsce)
 	cToStr[0] = znak;
 	if (miejsce > dlugosc || miejsce < 1)
 	{
-		std::cout << "Nie ma takiego miejsca w Napisie!";
+		std::cout << "Nie ma takiego miejsca w Napisie!" << std::endl;
 	}
 	else
 	{
-		std::cout << "Litera podana na " << miejsce << " miejscu: ";
+		std::cout << "Litera na " << miejsce << " miejscu: ";
 		std::cout << this->tablicaZnakow[miejsce-1] << std::endl;
 		std::cout << "Nowy napis: ";
 		this->tablicaZnakow[miejsce - 1] = znak;
 	}
 	return tablicaZnakow;
 }
-
-
