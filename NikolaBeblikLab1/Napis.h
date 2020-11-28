@@ -42,7 +42,7 @@ public:
 			delete[] tablicaZnakow;
 	}
 
-	int dlugosc()
+	int zwrocDlugosc()
 	{
 		return dlugosc;
 	};
@@ -72,7 +72,10 @@ public:
 
 	Napis polaczNapisTablica(const char * napis)
 	{
-		
+		int tempDlugosc = this->dlugosc + strlen(napis);
+		char* tempTablica = new char[tempDlugosc + 1];
+		strcpy(tempTablica, this->tablicaZnakow);
+		strcat(tempTablica, napis);
 	}
 	Napis polaczNapisZnak(const char znak)
 	{
