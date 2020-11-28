@@ -21,6 +21,9 @@ int main()
     std::cout << "Wypisz hello: ";
     hello.wypisz();
 
+    std::cout << "Wypisz znak: ";
+    znakNapis.wypisz();
+
     std::cout << "Polacz Napisy napis i hello: ";
     Napis polaczoneNapisy = napis.polaczNapisy(hello);
     polaczoneNapisy.wypisz();
